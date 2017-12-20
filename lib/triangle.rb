@@ -29,5 +29,3 @@ end
 
 class TriangleError < StandardError #triangle error is inherited from StandardError
 end
-
-
