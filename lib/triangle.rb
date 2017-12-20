@@ -24,6 +24,7 @@ class Triangle
     #kind error will raise a custom error if the triangle is invalid
     raise TriangleError if real_triangle.include?(false)
 end
+end
 
 
 class TriangleError < StandardError #triangle error is inherited from StandardError
