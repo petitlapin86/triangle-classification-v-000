@@ -21,10 +21,12 @@ class Triangle
   def validate_triangle
     real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
     [a, b, c].each { |s| real_triangle << false if s <= 0 }
+    #kind error will raise a custom error if the triangle is invalid 
+    raise TriangleError if real_triangle.include?(false)
+end 
 
 
-
-
-
-
+class TriangleError < StandardError #triangle error is inherited from StandardError
 end
+
+end # end class 
