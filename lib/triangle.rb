@@ -15,9 +15,16 @@ class Triangle
     :isosceles
   else
     :scalene  #if no sides are the same its scalene
-  end
-end
-  end 
+  end #end if else
+  end #end kind 
 
-  
+  def validate_triangle
+    real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
+    [a, b, c].each { |s| real_triangle << false if s <= 0 }
+
+
+
+
+
+
 end
